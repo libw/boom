@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 500px;height: 500px;
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            margin: auto;
+            line-height: 500px;text-align: center;
+            font-size: 50px;
+        }
+        div>span{
+            color: red;font-size: 55px;;
+        }
+        img{
+            width: 500px;height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="word">
+        本系统将在<span id="num">5</span>后爆炸
+    </div>
+</body>
+<script>
+    var s=document.getElementById('num');
+    var num=5;
+    setInterval(function () {
+        num--;
+        if(num==-1){
+            close()
+        }
+        s.innerHTML=num;
+    },1000);
+
+    var d=document.getElementById('word');
+    setInterval(function () {
+//        d.innerHTML='<img src="G)Q00SDT%}GTKR@H)W]B@0F.png" alt="">';
+        d.innerHTML='BOOM!!!';
+    },5000)
+</script>
+</html>
